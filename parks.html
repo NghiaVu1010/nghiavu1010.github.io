@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="styles/parkStyles.css">
+    <link rel="stylesheet" type="text/css" href="styles/site.css">
+    <title>Mountains and Parks</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+      <!-- Nav bar links -->
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="mountains.html">Mountains</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Parks</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <header class="jumbotron landing-bg">
+      <div class="container text-right">
+        <h1 class="display-4 headTitle obli green">Parks</h1>
+      </div>
+    </header>
+
+    <!-- Main section for searching parks-->
+    <main class="m-4">
+      <form action="#" method="GET">  
+        <fieldset class="border-success">
+          <legend class="text-center display-5 darkGreen text-white obli borderimg">Explore the Parks</legend>
+          <div class="contianer">
+            <div class="row">
+              <!-- Drop down selection by park types -->
+              <div class="col-4 my-3">
+                <label for="parkField">Park Types:</label>
+                <select class="custom-select mb-2" id="parkField">
+                  <option selected value="0">Choose...</option>
+                </select>
+                <button type="submit" class="btn btn-success" id="parkSearchBtn" value="Search Parks">Search by Type</button>
+              </div>
+
+              <p class="col-1 mt-6 text-center">OR</p>
+
+              <!-- Drop down selection by location -->
+              <div class="col-4 my-3">
+                <label for="stateField">Location:</label>
+                <select class="custom-select mb-2" id="stateField">
+                  <option selected value="0">Choose...</option>
+                </select>
+                <button type="submit" class="btn btn-success" id="stateSearchBtn" value="Search by State">Search by State</button>
+              </div>
+    
+              <!-- Clear button for fields and table -->
+              <div class="col-3 mt-5">
+                <button type="reset" class="btn btn-secondary" id="resetBtn">Clear</button>
+                <button type="submit" class="btn btn-success my-2" id="nationalSearchBtn">View All National Parks</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Table to hold all found data fields-->
+      <table class="table table-striped" id="tours">
+        <thead class="thead-dark">
+          <tr>
+            <th>Park Name</th>
+            <th>Location</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Visit</th>
+            <th>Coordinates</th>
+          </tr>
+        </thead>
+        <tbody id="dataBody">
+        </tbody>
+      </table>
+    </main>
+    
+    <footer class="container">
+      <hr>
+      <p>&copy;Hartcode Academy 2019</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="scripts/parkScripts.js"></script>
+  </body>
+</html>
